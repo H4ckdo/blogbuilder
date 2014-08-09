@@ -1,0 +1,4 @@
+type: CNAME
+host: http://hackdo.co
+answer: h4ckdo.github.io
+ttl: 300
