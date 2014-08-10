@@ -16,41 +16,24 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <hr class="red">
-    <hr class="green">
-    <hr class="orange">
-    <hr class="blue">
-
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-
-          <div id="title-and-quote" class="title-and-quote">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-            <div class="site-info">
-              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            </div>
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
           </div>
-
-          <div class="description-container">
-            <em class="site-description">{{ site.description }}</em>
-          </div>
-
+          
           <nav>
-            <div class="iten-nav">
-              <a href="{{ site.baseurl }}/">Blog</a>
-              <a href="{{ site.baseurl }}/articles.html">Articulos</a>
-              <a href="{{ site.baseurl }}/fotos.html">Evento</a>
-              <a href="{{ site.baseurl }}/about.html">Equipo</a>
-            </div>
+            <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="{{ site.baseurl }}/about">About</a>
           </nav>
         </header>
       </div>
