@@ -2,5 +2,11 @@
 layout: post
 title:Clousures en javascript
 ---
+#Clousures en javascript
 
-Hola mundo 
+´´´javascript
+	console.log("test");
+```
+
+
+
