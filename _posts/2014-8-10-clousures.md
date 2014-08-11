@@ -69,7 +69,7 @@ Que tal si hacemos un pequeño experimento y le pasamos como parametro algo a la
   var resultado=funcionPadre()(" :esto es data extra :p");
   //llama la funcionPadre que retorna una funcion anonima que a su vez retorna el valor  
   //que necesitamos y guardamos el resultado en la variable resultado.
-  console.log(resultado);//soy local y solo exito aqui
+  console.log(resultado);//soy local y solo exito aqui :esto es data extra :p
 ```
 
 Hagamos otro ejemplo un poco mas interesante, imagaina que en un ciclo for necesitamos
