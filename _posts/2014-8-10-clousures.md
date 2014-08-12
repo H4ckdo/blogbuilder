@@ -164,17 +164,33 @@ Esto es un poco complejo de entender asi que si no me entiendes no te desesperes
 Bien ya solucionamos un insiso falta el otro
 
 ¿ Por que el valor de i es 30 en el setTimeout ?
-  
-  El problema reside en que al momento en que queremo mostrar i dentro del "setTimeout" el ciclo for a terminado y ese 
- 
+
+Es por que al momento en que queremos mostrar i dentro del "setTimeout" el ciclo for a terminado pero cuando se ejecuta el "setTimeout" el ciclo "revive" y le incrementa 1 por el momento en el que se ejecuta, pero notas que ahora cuando imprimimos i dentro del "setTimeout" muestra 29 y ya no muestra mas 30, ahora no lo hace por que el tiempo entre cada iteracion aumenta como debe ser al ritmo del "setTimeout" 
 
 ```javascript
-for(var i=0;i<20;i++){
-	setTimeout(function(){
-		console.log(i);
-	},5000*i);
+for(var i=0;i<30;i++){
+  setTimeout(function(){
+    console.log(i);//29 29 29 ...
+  },5000*i);
 }
 ```
+Necesitamos mantener la existencia de i en cada iteracion para eso podemos hacer lo siguiente 
+
+```javascript
+for (var i = 0; i < 30 ; i++) {
+    setTimeout(function(e) { 
+      return function(){
+       console.log(e); //0 1 2 3 ....
+      }; 
+    }(i), 5000*i);
+
+}
+
+```
+Podemos mantener el valor de i usando una funcion anonima que se auto invoca una ["IIFE"](http://bentoncoding.com/2012/09/18/using-the-immediately-invoked-function-expression/)
+en este caso el problema no era que no estuvieramos a la variable i a nuestra disposicion si no que la referencia de i no es igual a si valor cuando se ejecuta el "setTimeout"y utlitizamos un clousure para retornar el valor real de i en cada itereracion 
+
+en conclusion un clousure es una funcion que puede acceder a las  variables locales que estan dentro de su alcance y podemos hacer cosas como retornar esa variable local o hacer lo que necesitemos.
 
 
-ToDo TERMINA DE ESCRIBIR EL POST
+
