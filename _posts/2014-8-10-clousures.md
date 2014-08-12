@@ -10,7 +10,7 @@ de las variables para que entiendas el por que de los clousures.
 Javascript limita el alcance de las variables a el ambito en donde fueron creadas
 por ejemplo: una variable global tiene un alcance global por que fue creada en un ambito global en cambio una variable local tiene un alcance local por que fue creada dentro de un ambito local como lo es una funcion, para que esto no se haga tan abstracto y puedas entender bien a lo que me refiero aqui hay una imagen que lo ilustra bien:   
 
-![alt tag](https://pbs.twimg.com/media/BuyMed1IgAACxYv.jpg:large)
+![alt tag](https://pbs.twimg.com/media/BuzfdMiIIAA0yN_.jpg:large)
 
 en esta imagen podemos apreciar que hay una funcion que tiene anidada otra funcion cada una tiene su respectiva variable y el alcance de cada variable esta limitado con las flechas hasta el cierre de su funcion padre y la variable global creada en lo mas alto del codigo tienen un alcance global y se puede accerder a su valor desde cualquier parte del codigo muy sencillo verdad ? entonces comencemos lo interesante los clousures.
 
