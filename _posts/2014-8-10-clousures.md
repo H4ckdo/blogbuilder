@@ -102,7 +102,7 @@ La manera mas facil de resolver el problema partirlo en 2 insisos
 * Por que el valor de i es 30 en el setTimeout ?
 
 
-Por que setTimeout se ejecuta despues de que termina el ciclo
+##Por que setTimeout se ejecuta despues de que termina el ciclo
 
 para responder esto es necesario que comprendas como es que funciona un "setTimeout" en PHP existe una intruccion similar al "setTimeout" llamada "sleep" vamos a emularla en JS para mostrarte como es que funcionan esta funciones de timepo.
 
@@ -163,7 +163,7 @@ Esto es un poco complejo de entender asi que si no me entiendes no te desesperes
 
 Bien ya solucionamos un insiso falta el otro
 
-¿ Por que el valor de i es 30 en el setTimeout ?
+##¿ Por que el valor de i es 30 en el setTimeout ?
 
 Es por que al momento en que queremos mostrar i dentro del "setTimeout" el ciclo for a terminado pero cuando se ejecuta el "setTimeout" el ciclo "revive" y le incrementa 1 por el momento en el que se ejecuta, pero notas que ahora cuando imprimimos i dentro del "setTimeout" muestra 29 y ya no muestra mas 30, ahora no lo hace por que el tiempo entre cada iteracion aumenta como debe ser al ritmo del "setTimeout" 
 
