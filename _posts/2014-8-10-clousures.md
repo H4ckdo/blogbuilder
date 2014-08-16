@@ -23,7 +23,7 @@ Bien te lo explico con un ejemplo: imagina que necesitamos el valor de una varia
   }
   //necesito el valor de la variable local en esta linea 
 ```
-para "extender el alcance" necesitamos un closure que se comporta como una función anidada dentro otra función que llamaremos función padre entonces la función anidada tiene acceso a las variables de su función padre, en este caso usaremos una función anónima como función anidada 'closure'
+para "extender el alcance" necesitamos un closure que se comporta como una función anidada dentro otra función que llamaremos función padre entonces la función anidada tiene acceso a las variables de su función padre, en este caso usaremos una función anónima como función anidada "closure"
 
 
 ```
