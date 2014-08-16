@@ -26,7 +26,7 @@ Bien te lo explico con un ejemplo: imagina que necesitamos el valor de una varia
   //necesito el valor de la variable local en esta linea 
 
 ```
-para "extender el alcance" necesitamos un closure que se comporta como una función anidada dentro otra función que llamaremos función padre entonces la función anidada tiene acceso a las variables de su función padre, en este caso usaremos una función anónima como función anidada 'closure'
+para "extender el alcance" necesitamos un closure que se comporta como una función anidada dentro otra función que llamaremos función padre entonces la función anidada tiene acceso a las variables de su función padre, en este caso usaremos una función anónima como función anidada "closure"
 
 
 ```javascript
@@ -185,8 +185,3 @@ en este caso el problema no era que no tuviéramos a la variable i a nuestra dis
 habia terminado cuando intentabamos llamarla.
 
 En conclusión un closure es una función que puede acceder a las variables que están dentro de su alcance y podemos hacer cosas como retornar esa variable o hacer lo que necesitamos, en este caso mantuvimos el valor de i intacto siempre con la ayuda de un closure para i.
-
-
-
-
-
