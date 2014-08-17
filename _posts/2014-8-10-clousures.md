@@ -17,7 +17,7 @@ En esta imagen podemos apreciar que hay una función que tiene anidada otra func
 
 Bien te lo explico con un ejemplo: imagina que necesitamos el valor de una variable por fuera de su función padre, es decir fuera de su alcance.
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
   function funcionPadre(){
      var local="soy local y solo exito aqui";//local
   }
@@ -27,7 +27,7 @@ Bien te lo explico con un ejemplo: imagina que necesitamos el valor de una varia
 para "extender el alcance" necesitamos un closure que se comporta como una función anidada dentro otra función que llamaremos función padre entonces la función anidada tiene acceso a las variables de su función padre, en este caso usaremos una función anónima como función anidada "closure"
 
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
   function funcionPadre(){
       var local="soy local y solo exito aqui";//local
       return function(){
@@ -35,8 +35,7 @@ para "extender el alcance" necesitamos un closure que se comporta como una funci
       }
   } 
   var resultado=funcionPadre()();
-  //llama la funcionPadre que retorna una función anónima que a su vez retorna el valor  
-  //que necesitamos y guardamos el resultado en la variable resultado
+  //llama la funcionPadre que retorna una función anónima que a su vez retorna el valor que necesitamos y guardamos el resultado en la variable resultado
   console.log(resultado);//soy local y solo exito aqui
 {%endhighlight%}
 
@@ -55,7 +54,7 @@ console.log(resultado);//[function]
 
 Que tal si hacemos un pequeño experimento y le pasamos como parametro algo a la función anonima y lo adjutamos con la función local
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
   function funcionPadre(){
       var local="soy local y solo exito aqui";//local
       return function(Extra){
@@ -71,7 +70,7 @@ Que tal si hacemos un pequeño experimento y le pasamos como parametro algo a la
 
 Hagamos otro ejemplo un poco mas interesante imagina que en un ciclo for necesitamos que entre cada iteracion  haya un retraso de 5 segundos
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
  for(var i=0;i<30;i++){
   console.log(i);
     //espera 5 segundos 
@@ -80,7 +79,7 @@ Hagamos otro ejemplo un poco mas interesante imagina que en un ciclo for necesit
 
 Lo mas lógico seria utilizar un "setTimeout" para que se quede esperando por 5 segundos entre cada iteracion 
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
 for(var i=0;i<30;i++){
   console.log(i);//0 1 2 3 4 ....29
     setTimeout(function(){
@@ -103,7 +102,7 @@ La manera mas fácil de resolver el problema es partirlo en 2 incisos:
 Para responder esto es necesario que comprendas como funciona el "setTimeout", en PHP existe una instrucción similar al "setTimeout" llamada "sleep" vamos a emularla en JS para mostrarte como es que funcionan estas funciones de tiempo.
 
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
  function  sleep(delay,cb){
    var T_futuro=new Date().getTime()+delay//toma la hora en milisegundos y le suma el 
    //retraso que queremos es decir los 5 segundos  
@@ -133,7 +132,7 @@ Esto hace que siempre que se llama a la función 'sleep' va tomar la hora y le s
 
 Con esto ya podemos volver al codigo y encontrar una solucion a nuestro problema ```setTimeout()``` es invocado en cada iteración y cada iteración toma una hora diferente para solucionarlo, basta con multiplicar i por el 'delay' esto va ha generar un tiempo en el que siempre hay 5 segundos de retraso en este caso.
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
 var delay=5000;
 for(var i=0;i<30;i++){
   setTimeout(function(){
@@ -148,7 +147,7 @@ Antes no funcionaba como queriamos por que siempre habia un tiempo fijo con aume
 
 Recuerdas esta variable 'T_futuro' 
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
  var T_futuro=new Date().getTime()+delay;
 {% endhighlight %}
 
@@ -160,7 +159,7 @@ Bien ya solucionamos un inciso falta el otro
 
 Es porque al momento en que queremos mostrar i dentro del ```setTimeout()``` el ciclo for a terminado, pero cuando se ejecuta el "setTimeout" el ciclo "revive" y le incrementa 1 por el momento en que se ejecuta. Notas que ahora cuando imprimimos i dentro del "setTimeout" muestra 29 y ya no muestra mas 30, ahora no lo hace por que el tiempo entre cada iteración aumenta como debe ser al ritmo del "setTimeout"
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
 for(var i=0;i<30;i++){
   setTimeout(function(){
     console.log(i);//29 29 29 ...
@@ -169,7 +168,7 @@ for(var i=0;i<30;i++){
 {% endhighlight %}
 Necesitamos mantener la existencia de i en cada iteración para eso podemos hacer lo siguiente
 
-{%highlight javascript%}
+{%highlight javascript linenos%}
 for (var i = 0; i < 30 ; i++) {
     setTimeout(function(e) { 
       return function(){
