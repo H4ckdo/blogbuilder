@@ -6,7 +6,7 @@
 name: Hackdó
 
 # Short bio or description (displayed in the header)
-description: Hackdó -Hackers del río- es la primera comunidad de desarrolladores del Chocó, que busca cambiar la sociedad a través de la creación de proyectos Open Source.
+description: -Hackers del río- es la primera comunidad de desarrolladores del Chocó, que busca cambiar la sociedad a través de la creación de proyectos Open Source.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/H4ckdo/h4ckdo.github.io/gh-pages/images/hackdo-kekyll.png
@@ -30,7 +30,7 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: h4ckdo
+disqus: hackdo
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: 
