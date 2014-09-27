@@ -12,12 +12,17 @@ Hackdó es la primera comunidad de desarrolladores del Chocó, donde encontrará
 
 ¡Por supuesto! Solo debes tener en cuenta algunos tips que te servirán de mucha ayuda. :smile:
 
-- Tener un conocimiento básico sobre [el uso sobre Markdown](http://daringfireball.net/projects/markdown/basics)
+- Una imágen con buena calidad para tu artículo
 
-- Saber utilizar [Github](http://www.github.com)
+- Tener una cuenta en [gravatar](http://gravatar.com) para anexar tu avatar al artículo que quieres compartir.
 
-- Muchas ganas de compartir
+- Tener un conocimiento básico sobre [el uso de Markdown](http://daringfireball.net/projects/markdown/basics)
+
+- Conocer comandos básicos sobre [Github](http://www.github.com)
 
 - Buena ortografia
 
-Con eso bastara para crear un articulo con el cual puedas aportar al flujo de conocimiento en la comunidad y el mundo -Así que llego el momento, conecta, enciende... arranca!
+- Muchas ganas de compartir
+
+
+Con eso bastara para crear un artículo con el que puedas aportar al flujo de conocimiento en la comunidad y el mundo -Así que llego el momento- conecta, enciende... arranca!
