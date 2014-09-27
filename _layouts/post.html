@@ -15,7 +15,7 @@ layout: default
 {% if author %}
   <span class="post-details-container">
       <!-- Mugshot. -->
-      <img id="avatar-picture" src="{{ author.email | to_gravatar }}" alt="A photo of {{ author.name }}" />
+      <img id="avatar-picture" src="{{ author.email || to_gravatar }}" alt="A photo of {{ author.name }}" />
       <!-- Personal Info. -->
       <span id="post-details">
         Por: <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> <br />
