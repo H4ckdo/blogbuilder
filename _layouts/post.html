@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<!-- Buscar los detalles del autor para configurar el sitio. -->
+{% assign author = site.data.authors[page.author] %}
+
+<!-- Arrojar los detalles del autor si existen. -->
+{% if author %}
+    <span>
+        <!-- Personal Info. -->
+        Escrito por: <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+    </span>
+{% endif %}
 
 <article class="post">
   <h1>{{ page.title }}</h1>

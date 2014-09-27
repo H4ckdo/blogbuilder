@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Bienvenidos a Hackdó!
-visible: 1
+
+##Author
+author: fredy_andrade
 ---
 
 Hackdó es la primera comunidad de desarrolladores del Chocó, donde encontrarás post acerca de diferentes lenguajes de programación e información acerca de los distintos proyectos Open Source creados por los desarrolladores de nuestra comunidad, ademas de información actualizada acerca de los próximos eventos que se llevarán a cabo por la comunidad.

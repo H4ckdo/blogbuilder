@@ -2,6 +2,9 @@
 layout: post
 comments: true
 title: Closures en Javascript
+
+#Author
+author: esneyder_palacios
 ---
 
 Antes de comenzar con explicaciones muy técnicas acerca de los closures es importante repasar primero el concepto del "alcance" 
