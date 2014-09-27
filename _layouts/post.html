@@ -6,20 +6,21 @@ layout: default
 
 <!-- Arrojar los detalles del autor si existen. -->
 {% if author %}
-    <span>
+    <span class="post-details-container">
         <!-- Mugshot. -->
-        <img src="{{ author.email | to_gravatar }}" alt="A photo of {{ author.name }}" />
+        <img id="avatar-picture" src="{{ author.email | to_gravatar }}" alt="A photo of {{ author.name }}" />
         <!-- Personal Info. -->
-        Escrito por: <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+        <span id="post-details">
+          Por: <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> <br />
+          <div class="date">
+            En {{ page.date | date: "%B %e, %Y" }}
+          </div>
+        </span>
     </span>
 {% endif %}
 
 <article class="post">
   <h1>{{ page.title }}</h1>
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
   <div class="entry">
     {{ content }}
   </div>
