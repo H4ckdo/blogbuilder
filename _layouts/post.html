@@ -7,6 +7,8 @@ layout: default
 <!-- Arrojar los detalles del autor si existen. -->
 {% if author %}
     <span>
+        <!-- Mugshot. -->
+        <img src="{{ author.email | to_gravatar }}" alt="A photo of {{ author.name }}" />
         <!-- Personal Info. -->
         Escrito por: <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
     </span>
@@ -21,7 +23,6 @@ layout: default
   <div class="entry">
     {{ content }}
   </div>
-
 
   {% include disqus.html disqus_identifier=page.disqus_identifier %}
 </article>
