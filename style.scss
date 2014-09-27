@@ -113,12 +113,31 @@ strong, b {
 img {
   max-width: 100%;
 }
-
+.post-details-container {
+  max-width: 460px;
+  min-width: 280px;
+}
+#avatar-picture {
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  width:40px;
+  height:40px;
+  float: left;
+}
+#post-details {
+  margin-left: 10px;
+  margin-top: 0.4em;
+}
 .date {
   font-style: italic;
   font-size: 0.9em;
   font-family: $courgettenor;
   color: $gray;
+  margin-left: 50px;
+  margin-top: 0.2em;
 }
 
 // Specify the color of the selection
